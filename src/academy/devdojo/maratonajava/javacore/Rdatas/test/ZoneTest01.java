@@ -39,14 +39,13 @@ public class ZoneTest01 {
         OffsetDateTime offsetDateTime3 = nowIstant.atOffset(offsetManaus);
         System.out.println(offsetDateTime3);
 
-        JapaneseDate JapaneseDate = java.time.chrono.JapaneseDate.now();
-        System.out.println(JapaneseDate);
+        JapaneseDate japaneseDate = JapaneseDate.from(LocalDateTime.now());
+        System.out.println(japaneseDate);
+        LocalDate meijiEraLocalDate = LocalDate.of(1900,2,1);
+        JapaneseDate meijiEra = JapaneseDate.from(meijiEraLocalDate);
+        System.out.println(meijiEra);
 
-        JapaneseDate JapaneseDate2 = java.time.chrono.JapaneseDate.from(LocalDateTime.now());
-        System.out.println(JapaneseDate2);
 
-        //ZoneOffset offsetJAPAN = ZoneOffset;
-        //OffsetDateTime offsetDateTime4 = OffsetDateTime.of(now, offset);
 
     }
 }
